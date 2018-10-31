@@ -1,3 +1,7 @@
 hello hadoop
 hello map
 hello reduce
+That is
+I love you
+That is
+yes

@@ -1,4 +1,0 @@
-hadoop	file:/home/hadoop/IdeaProjects/hadoop_test/input/word2.txt:2;file:/home/hadoop/IdeaProjects/hadoop_test/input/word.txt:1;
-hello	file:/home/hadoop/IdeaProjects/hadoop_test/input/word.txt:3;file:/home/hadoop/IdeaProjects/hadoop_test/input/word2.txt:2;
-map	file:/home/hadoop/IdeaProjects/hadoop_test/input/word.txt:1;
-reduce	file:/home/hadoop/IdeaProjects/hadoop_test/input/word.txt:1;
