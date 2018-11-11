@@ -1,0 +1,5 @@
+
+Qt Creator IDE – Making software development fast, easy & fun
+Qt Creator is a cross platform integrated development environment (IDE) to create C++ and QML applications for multiple desktop, embedded and mobile platforms. It comes with a code editor, and is integrated with tools for designing, coding, testing, deploying and maintaining your software throughout its product lifecycle.
+
+Developers like Qt Creator because it has a simple and intuitive interface, features a code editor with syntax highlighting and auto-completion, drag-and-design UI creation, visual debugging & profiling tools and many other tools to support your project. And if you feel like prototyping - just hit play. Qt Creator is part of Qt and therefore available through the online installer. Just click below. 

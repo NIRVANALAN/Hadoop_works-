@@ -1,0 +1,2 @@
+Related Resources
+Visit our documentation pages for a deep-dive into nuts and bolts of the Qt APIs and libraries, how to work the Qt tools and how to make the cogs in the Qt Creator IDE turn.

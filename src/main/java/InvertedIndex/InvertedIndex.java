@@ -1,6 +1,5 @@
 package InvertedIndex;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
@@ -15,31 +14,29 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class InvertedIndex {
-    final static String INPUT_PATH = "input/";
-    final static String OUTPUT_PATH = "output/";
 
     public static class Map extends Mapper<Object, Text, Text, Text> {
 
         private Text keyInfo = new Text(); // 存储单词和URL组合
         private Text valueInfo = new Text(); // 存储词频
-        private FileSplit split; // 存储Split对象
+        private FileSplit fileSplit; // 存储Split对象
         int a = 0;
 
         // 实现map函数
         public void map(Object key, Text value, Context context)
                 throws IOException, InterruptedException {
             // 获得<key,value>对所属的FileSplit对象
-            if ((FileSplit) context.getInputSplit() != split)
+            if ((FileSplit) context.getInputSplit() != fileSplit)
                 a = 0;
-            split = (FileSplit) context.getInputSplit();
+            fileSplit = (FileSplit) context.getInputSplit();
             a++;
             StringTokenizer itr = new StringTokenizer(value.toString());
 //            System.out.println(value.toString());
-            String[] sentence = value.toString().split(" ");
+            String[] set = value.toString().split(" ");
             while (itr.hasMoreTokens()) {
                 // 只获取文件的名称。
-                int splitIndex = split.getPath().toString().indexOf("file");
-                String[] filename = split.getPath().toString().substring(splitIndex).split("/");
+                int splitIndex = fileSplit.getPath().toString().indexOf("file");
+                String[] filename = fileSplit.getPath().toString().substring(splitIndex).split("/");
                 keyInfo.set(itr.nextToken() + ":"
                         + filename[filename.length - 1]);
                 // 词频初始化为1
@@ -57,16 +54,16 @@ public class InvertedIndex {
                 throws IOException, InterruptedException {
             // 统计词频
             int sum = 0;
-            StringBuilder pos = new StringBuilder("<");
+            StringBuilder position = new StringBuilder("<");
             for (Text value : values
             ) {
                 sum += Integer.parseInt(value.toString().split("<")[0]);
-                pos.append(value.toString().split("<")[1].split(">")[0]+",");
+                position.append(value.toString().split("<")[1].split(">")[0]+",");
             }
-            pos.append(">");
+            position.append(">");
             int splitIndex = key.toString().indexOf(":");
             // 重新设置value值由URL和词频组成
-            info.set(key.toString().substring(splitIndex + 1) + ":" + sum + pos);
+            info.set(key.toString().substring(splitIndex + 1) + ":" + sum + position);
             // 重新设置key值为单词
             key.set(key.toString().substring(0, splitIndex));
             context.write(key, info);
@@ -80,11 +77,11 @@ public class InvertedIndex {
         public void reduce(Text key, Iterable<Text> values, Context context)
                 throws IOException, InterruptedException {
             // 生成文档列表
-            StringBuilder fileList = new StringBuilder();
+            StringBuilder files = new StringBuilder();
             for (Text value : values) {
-                fileList.append(value.toString()).append(";");
+                files.append(value.toString()).append(";");
             }
-            result.set(fileList.toString());
+            result.set(files.toString());
 
             context.write(key, result);
         }
@@ -111,9 +108,7 @@ public class InvertedIndex {
         job.setOutputValueClass(Text.class);
 
         // 设置输入和输出目录
-//        FileInputFormat.addInputPath(job, new Path(INPUT_PATH));
         FileInputFormat.addInputPath(job, new Path(args[0]));
-//        FileOutputFormat.setOutputPath(job, new Path(OUTPUT_PATH));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
