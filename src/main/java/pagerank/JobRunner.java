@@ -15,7 +15,7 @@ public class JobRunner {
             System.out
                     .println("please just input one parameter for appoint how many times to count pagerank, such as 10.");
             System.exit(0);
-        }
+        } // check if the input is enough
         int totalCounts = Integer.parseInt(args[0]);//
         int result = 0;
 
@@ -23,17 +23,18 @@ public class JobRunner {
         String output_dir = "output_page_rank/";
 
         Configuration conf = new Configuration();
-        FileSystem fileSystem = FileSystem.get(conf);
-        if (fileSystem.exists(new Path(output_dir))) {
-            fileSystem.delete(new Path(output_dir));
-        }
+//        FileSystem fs = FileSystem.get(conf);
+//        if (fs.exists(new Path(output_dir))) {
+//            fs.delete(new Path(output_dir), true);
+//        }
         String temp = null;
         PageRankDriver driver;
         for (int i = 0; i < totalCounts; i++) {
             driver = new PageRankDriver();
             driver.setConf(conf);
-            result = ToolRunner.run(driver, new String[]{String.valueOf(i),
-                    input_dir, output_dir});
+//            result = ToolRunner.run(driver, new String[]{String.valueOf(i),
+//                    input_dir, output_dir});
+            result = ToolRunner.run(driver, new String[]{String.valueOf(i), input_dir, output_dir});
             if (result > 0) {
                 temp = input_dir;
                 input_dir = output_dir;

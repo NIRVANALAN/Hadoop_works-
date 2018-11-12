@@ -1,4 +1,4 @@
-package org.algorithm.pagerank.java;
+package pagerank;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -9,50 +9,68 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 
-/**
- * 用于存放Page信息
- * 
- * @author lk
- * 
- */
 public class PageText implements WritableComparable<PageText> {
-	public Text page; // 页面信息
-	public FloatWritable rank;// 该页面的page rank值
-	private IntWritable count;// 该页面的出链数量
 
-	public PageText() {
-		this(new Text(), new FloatWritable(), new IntWritable());
-	}
+    public Text page; // page Text
+    public FloatWritable rank;// get PR
+    private IntWritable count;// outlink length
 
-	public PageText(String page, float rank, int count) {
-		this(new Text(page), new FloatWritable(rank), new IntWritable(count));
-	}
+    public Text getPage() {
+        return page;
+    }
 
-	public PageText(Text page, FloatWritable rank, IntWritable count) {
-		super();
-		this.page = page;
-		this.rank = rank;
-		this.count = count;
-	}
+    public FloatWritable getRank() {
+        return rank;
+    }
 
-	@Override
-	public void readFields(DataInput in) throws IOException {
-		page.readFields(in);
-		rank.readFields(in);
-		count.readFields(in);
-	}
+    public IntWritable getCount() {
+        return count;
+    }
 
-	@Override
-	public void write(DataOutput out) throws IOException {
-		page.write(out);
-		rank.write(out);
-		count.write(out);
-	}
+    public PageText() {
+        this(new Text(), new FloatWritable(), new IntWritable());
+    }
 
-	@Override
-	public int compareTo(PageText arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    public PageText(String page, float rank, int count) {
+        this(new Text(page), new FloatWritable(rank), new IntWritable(count));
+    }
 
+    public PageText(Text page, FloatWritable rank, IntWritable count) {
+        super();
+        this.page = page;
+        this.rank = rank;
+        this.count = count;
+    }
+
+    @Override
+    public void readFields(DataInput in) throws IOException {
+        page.readFields(in);
+        rank.readFields(in);
+        count.readFields(in);
+    }
+
+    @Override
+    public void write(DataOutput out) throws IOException {
+        page.write(out);
+        rank.write(out);
+        count.write(out);
+    }
+
+    @Override
+    public int compareTo(PageText arg0) {
+        // TODO Auto-generated method stub
+        PageText other = (PageText) arg0;
+        if (this.getRank().get() > other.getRank().get())
+            return -1;
+        if (this.getRank().get() < other.getRank().get())
+            return 1;
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+//        return super.toString();
+        return this.getRank().get()+"/t"+this.getCount().get();
+    }
 }
+
