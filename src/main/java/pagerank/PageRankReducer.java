@@ -10,15 +10,15 @@ import org.apache.hadoop.mapreduce.Reducer;
 public class PageRankReducer extends Reducer<Text, Text, Text, Text> {
 	private static final Log log = LogFactory.getLog(PageRankReducer.class);
 
-	private static float factor = 0.85f;
+    private static float factor = 0.85f;
 
-	@Override
-	protected void setup(Context context) throws IOException,
-			InterruptedException {
-		// factor default value 0.85f
-		factor = context.getConfiguration().getFloat("mapred.pagerank.factor",
-				0.85f);
-	}
+    @Override
+    protected void setup(Context context) throws IOException,
+            InterruptedException {
+        // factor default value 0.85f
+        factor = context.getConfiguration().getFloat("mapred.pagerank.factor",
+                0.85f);
+    }
 
 	@Override
 	protected void reduce(Text key, Iterable<Text> values, Context context)

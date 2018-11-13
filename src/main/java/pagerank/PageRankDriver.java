@@ -21,6 +21,7 @@ public class PageRankDriver extends Configured implements Tool {
 
 		Job job = new Job(getConf(), "PageRank job_" + args[0]);
 		job.setJarByClass(this.getClass());
+//        job.setJarByClass(PageText.class);
 
 		Configuration conf = job.getConfiguration();
 

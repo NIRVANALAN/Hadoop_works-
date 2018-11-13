@@ -42,6 +42,11 @@ public class PageText implements WritableComparable<PageText> {
         this.count = count;
     }
 
+    public PageText(Text page) {
+        super();
+        this.page = page;
+    }
+
     @Override
     public void readFields(DataInput in) throws IOException {
         page.readFields(in);
@@ -70,7 +75,8 @@ public class PageText implements WritableComparable<PageText> {
     @Override
     public String toString() {
 //        return super.toString();
-        return this.getRank().get()+"/t"+this.getCount().get();
+//        return this.getRank().get()+";"+this.getCount().get();
+        return this.getPage()+","+this.getRank();
     }
 }
 

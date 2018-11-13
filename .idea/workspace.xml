@@ -8,12 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eceb8b62-7874-44fe-aa86-391281a2bf61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_page_rank/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_page_rank/page_rank_input_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_page_rank/sample-large.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/PageText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/PageText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pagerank/JobRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pagerank/JobRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pagerank/PageRankDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pagerank/PageRankDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pagerank/PageRankMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pagerank/PageRankMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pagerank/PageRankReducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pagerank/PageRankReducer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,36 +40,36 @@
         <counts>
           <entry key="MF" value="2" />
           <entry key="_SUCCESS" value="1" />
-          <entry key="class" value="6" />
-          <entry key="crc" value="5" />
+          <entry key="class" value="9" />
+          <entry key="crc" value="6" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="java" value="21" />
-          <entry key="part-r-00000" value="25" />
-          <entry key="txt" value="22" />
+          <entry key="java" value="30" />
+          <entry key="part-r-00000" value="27" />
+          <entry key="txt" value="29" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
+          <entry key="CLASS" value="9" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="21" />
+          <entry key="JAVA" value="30" />
           <entry key="Manifest" value="2" />
-          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="PLAIN_TEXT" value="64" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="44" />
-          <entry key="java" value="2089" />
+          <entry key="java" value="2451" />
           <entry key="txt" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2089" />
+          <entry key="JAVA" value="2451" />
           <entry key="PLAIN_TEXT" value="154" />
         </counts>
       </usages-collector>
@@ -81,10 +82,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="115">
+              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,10 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/output.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="155">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -104,79 +105,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
+            <state relative-caret-position="-84">
+              <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="25" />
               <folding>
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input_page_rank/part-r-00000">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/sample-large.txt">
+        <entry file="file://$PROJECT_DIR$/input_page_rank/page_rank_input_1.txt">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input/page_rank_input_1.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="973">
-              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -206,13 +148,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ForTest/TestClass.java" />
         <option value="$PROJECT_DIR$/input/word.txt" />
         <option value="$PROJECT_DIR$/src/main/java/InvertedIndex/InvertedIndex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageTextCompare.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageText.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageTextCompare.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pagerank/PageText.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -249,11 +191,6 @@
             <path>
               <item name="hadoop_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="hadoop_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hadoop_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hadoop_test" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hadoop_test" type="b2602c69:ProjectViewProjectNode" />
@@ -298,7 +235,7 @@
     <property name="SearchEverywhereHistoryKey" value="PageText&#9;PSI&#9;JAVA://pagerank.PageText" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542031738130" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542070518914" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -309,9 +246,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/input_page_rank" />
+      <recent name="$PROJECT_DIR$/page_rank_input" />
       <recent name="$PROJECT_DIR$/src/main/java/pagerank" />
       <recent name="$PROJECT_DIR$/input" />
-      <recent name="$PROJECT_DIR$/input_page_rank" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -347,7 +285,7 @@
     <configuration name="PageRank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="pagerank.JobRunner" />
       <module name="hadoop_test" />
-      <option name="PROGRAM_PARAMETERS" value="20" />
+      <option name="PROGRAM_PARAMETERS" value="10" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -395,13 +333,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29968000" />
+    <option name="totallyTimeSpent" value="34601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1373" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19668426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2577242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -410,14 +347,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20134228" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27785236" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2671141" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40134227" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3785235" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30067113" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.31946307" />
@@ -446,6 +383,12 @@
           <line>310</line>
           <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -534,12 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input/related.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/qt.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -575,17 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar!/org/apache/hadoop/conf/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -610,85 +536,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_page_rank/._SUCCESS.crc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_page_rank/page_rank_input_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_page_rank/part-r-00000">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/input_page_rank/._SUCCESS.crc" />
+    <entry file="file://$PROJECT_DIR$/input_page_rank/page_rank_input_1.txt" />
     <entry file="file://$PROJECT_DIR$/output/part-r-00000">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-84" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="973">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_page_rank/sample-large.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_page_rank/output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/page_rank_input_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_page_rank/part-r-00000">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/input_page_rank/sample-large.txt" />
+    <entry file="file://$PROJECT_DIR$/input_page_rank/output.txt" />
     <entry file="file://$PROJECT_DIR$/input/sample-large.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -699,27 +555,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageText.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
+        <state relative-caret-position="28">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/qt.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/related.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding>
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar!/org/apache/hadoop/mapred/LocalJobRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        <state relative-caret-position="149">
+          <caret line="598" selection-start-line="598" selection-end-line="598" />
         </state>
       </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar!/org/apache/hadoop/mapred/MapTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar!/org/apache/hadoop/mapreduce/Mapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_page_rank/.part-r-00000.crc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/page_rank_input_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_page_rank/part-r-00000">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_page_rank/part-r-00000">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/JobRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageRankReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pagerank/PageText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_page_rank/page_rank_input_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
