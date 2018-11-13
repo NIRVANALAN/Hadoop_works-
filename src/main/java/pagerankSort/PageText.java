@@ -64,18 +64,15 @@ public class PageText implements WritableComparable<PageText> {
     @Override
     public int compareTo(PageText arg0) {
         // TODO Auto-generated method stub
-        PageText other = (PageText) arg0;
-        if (this.getRank().get() > other.getRank().get())
+        if (this.getRank().get() >= ((PageText) arg0).getRank().get())
             return -1;
-        if (this.getRank().get() < other.getRank().get())
+        if (this.getRank().get() < ((PageText) arg0).getRank().get())
             return 1;
         return 0;
     }
 
     @Override
     public String toString() {
-//        return super.toString();
-//        return this.getRank().get()+";"+this.getCount().get();
         return this.getPage()+","+this.getRank();
     }
 }

@@ -35,10 +35,6 @@ public class PageRankMapper extends Mapper<Text, Text, Text, Text> {
             rank = Float.parseFloat(link[1]);
         }
         int outLinkLen = outLinks.length;
-//		for (String s : outLinks) {
-//			context.write(new Text(s), new Text(link[0] + ";" + rank + ";"
-//					+ outLinkLen));
-//		}
 		for (String s:outLinks
 			 ) {
 			context.write(new Text(s), new Text(link[0]+';'+rank+';'+outLinkLen));

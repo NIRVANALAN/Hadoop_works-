@@ -48,11 +48,6 @@ public class PageRankDriver extends Configured implements Tool {
 		job.setReducerClass(PageRankReducer.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);
-
-//		job.setReducerClass(PageRankReducer.class);
-//		job.setOutputKeyClass(Text.class);
-//		job.setOutputValueClass(Text.class);
-
 		return job.waitForCompletion(true) ? 1 : 0;
 	}
 

@@ -6,6 +6,8 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.util.ToolRunner;
+import pagerankSort.PageRankSortDriver;
+
 
 public class JobRunner {
     private static final Log log = LogFactory.getLog(JobRunner.class);
@@ -44,5 +46,23 @@ public class JobRunner {
                 log.info("job_" + i + " is failed ...");
             }
         }
+        { // pagerank sort
+            output_dir = "output_page_rank_sorted/";
+
+            conf = new Configuration();
+            temp = null;
+            PageRankSortDriver sortDriver;
+            sortDriver = new PageRankSortDriver();
+            sortDriver.setConf(conf);
+//            result = ToolRunner.run(driver, new String[]{String.valueOf(i),
+//                    input_dir, output_dir});
+            result = ToolRunner.run(sortDriver, new String[]{input_dir, output_dir});
+            if (result > 0) {
+                log.info("sort is success ...");
+            } else {
+                log.info("sort is failed ...");
+            }
+        }
+
     }
 }
